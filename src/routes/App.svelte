@@ -5,7 +5,7 @@
 	import Split from 'split-grid';
 	import { onMount } from 'svelte';
 	import Image from './Image.svelte'
-
+	
 	// 	Mock API Data
 	let colors = [
 		"#fff989",
@@ -41,7 +41,20 @@
   let titleFontFamily = "'Segoe UI', Geneva, Verdana, sans-serif";
 
   let altThumb = false;
+
+	import { Body, classList, style } from 'svelte-body@latest';
+	
+	let showing = false;
+	
+	let classes = 'teal';
+	let styles = 'color: blue';
 </script>
+
+	<!-- A example where style is a classic string -->
+	<Body style="background-color: #202120;" />
+
+	<!-- Style can also be an object of styles -->
+	<Body style={{ color: 'white' }} />
 
 <div class="root">
 	<div class="top-bar">
@@ -147,6 +160,12 @@
 		grid-area: c-split;
 	}
 
+	/* It's not recommended to do :global styles, do it in a global stylesheet instead */
+	:global(.teal) {
+		background-color: teal;
+	}
+
+	
 </style>
 
 
