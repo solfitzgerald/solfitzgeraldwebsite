@@ -41,21 +41,12 @@
   let titleFontFamily = "'Segoe UI', Geneva, Verdana, sans-serif";
 
   let altThumb = false;
-
-	import { Body, classList, style } from 'svelte-body@latest';
 	
 	let showing = false;
 	
 	let classes = 'teal';
 	let styles = 'color: blue';
 </script>
-
-	<!-- A example where style is a classic string -->
-	<Body style="background-color: #202120;" />
-
-	<!-- Style can also be an object of styles -->
-	<Body style={{ color: 'white' }} />
-
 <div class="root">
 	<div class="top-bar">
 		Sol FitzGerald - Composer
@@ -69,6 +60,8 @@
 			width = 100%;
 	/>
 
+
+		
 		<p>
 	Sol FitzGerald is a game and film composer, jazz pianist, and private music teacher primarily based in Boston and Baltimore. Coming from a background in jazz, Sol started their musical journey studying under Washington Capitals organist Bruce Anderson, learning piano performance, an understanding of jazz harmony and music theory, and composition. Sol continued to develop their skills in jazz piano and composition, eventually earning themselves an admission into Berklee College of Music with a full tuition scholarship. Now at Berklee, Sol studies Film and Media Scoring with a double major in Game and Interactive Media Scoring, and continues to expand their compositional abilities through film and game collaborations with students in MassArt, Emerson, Tufts, and Maryland Institute College of Art. 
 
@@ -137,9 +130,12 @@
 		text-align: center;
 		font-family: 'Castoro Titling';
 		font-size: 2em;
+		color: white;
 	}
 	.side-bar {
 		grid-area: side;
+		color: white;
+		background: #2d2e2d;
 	}
 	.top-right-bar {
 		grid-area: top-right;
@@ -147,24 +143,31 @@
 		text-align: center;
 		font-family: 'Castoro Titling';
 		font-size: 2em;
+		color: white;
 	}
 	.contents {
 		grid-area: contents;
+		color: white;
+		background: #2d2e2d;
 	}	
 
 	.row-splitter {
 		grid-area: r-split;
+		background: #2d2e2d;
 	}
 
 	.column-splitter {
 		grid-area: c-split;
+		background: #2d2e2d;
 	}
 
 	/* It's not recommended to do :global styles, do it in a global stylesheet instead */
 	:global(.teal) {
-		background-color: teal;
+		background-color: #2d2e2d;
 	}
 
+:global(body) { /* this will apply to <body> */ margin: 0; padding: 0; }
+	
 	
 </style>
 

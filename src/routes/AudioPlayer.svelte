@@ -85,6 +85,7 @@
 		transition: filter 0.2s;
 		color: var(--fg-3);
 		user-select: none;
+		background: #2d2e2d;
 	}
 
 	.player:not(.paused) {
@@ -93,11 +94,12 @@
 	}
 
 	button {
-		width: 100%;
+		width: 2.6em;
 		aspect-ratio: 1;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		border-radius: 50%;
+		background: #707370;
 	}
 
 	[aria-label="pause"] {
